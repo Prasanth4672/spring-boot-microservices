@@ -122,7 +122,7 @@
 						<image>openjdk:11</image>
 					</from>
 					<to>
-						<image>registry.hub.docker.com/dailycodebuffer/cloudgateway</image>
+						<image>registry.hub.docker.com/prakey/cloudgateway</image>
 						<tags>${project.version}</tags>
 					</to>
 				</configuration>
