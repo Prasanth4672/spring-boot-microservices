@@ -2,6 +2,9 @@ server:
   port: 9090
 
 spring:
+  redis:
+    host: redis
+    port: 6379
   application:
     name: API-GATEWAY
   config:
@@ -51,8 +54,8 @@ spring:
 
 okta:
   oauth2:
-    issuer: https://dev-15585796.okta.com/oauth2/default
+    issuer: https://dev-h7cjh1glw77bsmub.us.auth0.com/api/v2/
     audience: api://default
-    client-id: 0oa6cgklvwIS2SoFZ5d7
-    client-secret: L_VPQB5XQX5QAhnxaDqA0IhWG-TImnVpaHW7ER33
+    client-id: oQeR4GUVlqVFizs8poAHeNpjnTGT1w3n
+    client-secret: xD2sCLauHmXervSpkMvVQ_20Eexh5UGzPJifRPe36QovC1K_paipNTj68M7YMsCF
     scopes: openid, email, profile, offline_access

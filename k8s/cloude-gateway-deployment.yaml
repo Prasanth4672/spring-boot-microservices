@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloude-gateway-app
+spec:
+  selector:
+    matchLabels:
+      app: cloude-gateway-app
+  template:
+    metadata:
+      labels:
+        app: cloude-gateway-app
+    spec:
+      containers:
+        - name: cloude-gateway-app
+          image: prakey/cloudegateway
+          ports:
+            - containerPort: 9090
+          env:
+            - name: EUREKA_SERVER_ADDRESS
+              valueFrom:
+                configMapKeyRef:
+                  name: eureka-cm
+                  key: eureka_server_address
+            - name: CONFIG_SERVER_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: config-cm
+                  key: config_server_url
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cloude-gateway-svc
+spec:
+  type: LoadBalancer
+  selector:
+    app: cloude-gateway-app
+  ports:
+    - port: 80
+      targetPort: 9090
