@@ -59,7 +59,7 @@
 						<image>openjdk:11</image>
 					</from>
 					<to>
-						<image>registry.hub.docker.com/dailycodebuffer/serviceregistry</image>
+						<image>registry.hub.docker.com/prakey/serviceregistry</image>
 						<tags>${project.version}</tags>
 					</to>
 				</configuration>

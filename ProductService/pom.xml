@@ -111,7 +111,7 @@
 						<image>openjdk:11</image>
 					</from>
 					<to>
-						<image>registry.hub.docker.com/dailycodebuffer/productservice</image>
+						<image>registry.hub.docker.com/prakey/productservice</image>
 						<tags>${project.version}</tags>
 					</to>
 				</configuration>
