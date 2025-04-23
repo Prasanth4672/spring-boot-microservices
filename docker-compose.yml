@@ -1,12 +1,12 @@
 version: '3'
 services:
   serviceregistry:
-    image: 'dailycodebuffer/serviceregistry:0.0.1'
+    image: 'prakey/serviceregistry:0.0.1'
     container_name: serviceregistry
     ports:
       - '8761:8761'
   configserver:
-    image: 'dailycodebuffer/configserver:0.0.1'
+    image: 'prakey/configserver:0.0.1'
     container_name: configserver
     ports:
       - '9296:9296'
@@ -20,7 +20,7 @@ services:
     depends_on:
       - serviceregistry
   cloudgateway:
-    image: 'dailycodebuffer/cloudgateway:latest'
+    image: 'prakey/cloudgateway:latest'
     container_name: cloudgateway
     ports:
       - '9090:9090'
